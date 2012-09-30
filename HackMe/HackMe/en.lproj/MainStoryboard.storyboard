@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Home View Controller - Home-->
+        <!--Home View Controller - Feed-->
         <scene sceneID="ggz-1q-Hee">
             <objects>
                 <tableViewController id="RqB-Ef-dog" customClass="HomeViewController" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="RqB-Ef-dog" id="dSL-IE-o0n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="kkq-T5-HdM"/>
+                    <navigationItem key="navigationItem" title="Feed" id="kkq-T5-HdM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5b-Bw-vZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,11 +123,11 @@
                                             <rect key="frame" x="9" y="6" width="34" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hlq-bI-hSn">
-                                            <rect key="frame" x="74" y="11" width="42" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hlq-bI-hSn">
+                                            <rect key="frame" x="74" y="11" width="63" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
@@ -283,6 +283,7 @@
         <class className="DisplayVideoViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DisplayVideoViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="viewBackground" candidateClass="UIView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
