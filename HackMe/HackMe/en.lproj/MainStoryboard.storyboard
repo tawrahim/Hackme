@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <deployment version="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vjd-Sq-zWf" kind="relationship" relationship="viewControllers" id="yeU-8e-MwD"/>
+                        <segue destination="KSb-ZI-6mb" kind="relationship" relationship="viewControllers" id="cJu-nn-A0B"/>
+                        <segue destination="T5f-tZ-FmC" kind="relationship" relationship="viewControllers" id="Dp0-Nv-xrN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--Home View Controller - Home-->
+        <scene sceneID="ggz-1q-Hee">
+            <objects>
+                <tableViewController id="RqB-Ef-dog" customClass="HomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="209" sectionHeaderHeight="22" sectionFooterHeight="22" id="MWD-aW-0bp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="209" id="0bw-9X-JKY">
+                                <rect key="frame" x="0.0" y="22" width="320" height="209"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="card.png" id="Oc1-6i-dUV">
+                                            <rect key="frame" x="13" y="10" width="295" height="187"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" image="Card_preview_cat.png" id="zZQ-Sf-Hi2">
+                                            <rect key="frame" x="27" y="17" width="267" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" image="user_1.png" id="C1J-wX-mfC">
+                                            <rect key="frame" x="27" y="162" width="31" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ouc-lM-Adi">
+                                            <rect key="frame" x="66" y="164" width="228" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-big.png" id="1jk-rM-Cd6">
+                                            <rect key="frame" x="131" y="66" width="55" height="41"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="mGf-M4-5b9" kind="push" identifier="ShowVideo" id="X0q-xI-TDi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RqB-Ef-dog" id="3Xb-uq-0A1"/>
+                            <outlet property="delegate" destination="RqB-Ef-dog" id="dSL-IE-o0n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="kkq-T5-HdM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5b-Bw-vZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="-528"/>
+        </scene>
+        <!--Display Video View Controller-->
+        <scene sceneID="316-zS-ad2">
+            <objects>
+                <tableViewController id="mGf-M4-5b9" customClass="DisplayVideoViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" id="ONV-sd-LDj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="8Of-Od-w0D">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="card_preview.png" id="TOW-dn-fF2">
+                                    <rect key="frame" x="12" y="8" width="295" height="192"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <webView contentMode="scaleToFill" id="CGD-Jd-Dlp">
+                                    <rect key="frame" x="19" y="17" width="282" height="172"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </webView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="47" id="y8P-mo-AiL">
+                                <rect key="frame" x="0.0" y="231" width="320" height="47"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="card_comment_bkg.png" id="Plz-h4-ewL">
+                                            <rect key="frame" x="51" y="6" width="258" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="user_1.png" id="vjD-Y7-OMh">
+                                            <rect key="frame" x="9" y="6" width="34" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hlq-bI-hSn">
+                                            <rect key="frame" x="74" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mGf-M4-5b9" id="Zin-wf-RV5"/>
+                            <outlet property="delegate" destination="mGf-M4-5b9" id="7hz-Tz-dXd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="D89-B6-FVd"/>
+                    <connections>
+                        <outlet property="viewBackground" destination="8Of-Od-w0D" id="8df-q4-igy"/>
+                        <outlet property="webView" destination="CGD-Jd-Dlp" id="D3F-Fv-Exf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pz1-5n-Vl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766" y="-541"/>
+        </scene>
+        <!--Table View Controller - Nearby-->
+        <scene sceneID="jbg-bR-L7d">
+            <objects>
+                <tableViewController id="P8Y-W2-F8p" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3L5-fN-QDi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oar-BN-nAZ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P8Y-W2-F8p" id="rkJ-4Z-4tZ"/>
+                            <outlet property="delegate" destination="P8Y-W2-F8p" id="Ipu-NX-Aen"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Nearby" id="PDb-si-mjo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnc-1p-C9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="150"/>
+        </scene>
+        <!--Table View Controller - Me-->
+        <scene sceneID="GvT-7V-JRb">
+            <objects>
+                <tableViewController id="lhF-Gf-iwi" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Suh-EJ-24l">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="z70-t6-Yia">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lhF-Gf-iwi" id="YTE-yq-orN"/>
+                            <outlet property="delegate" destination="lhF-Gf-iwi" id="ql7-g6-N2R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Me" id="vZJ-E0-Axp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GML-Hi-1M5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="811"/>
+        </scene>
+        <!--Navigation Controller - Feed-->
+        <scene sceneID="DrG-CZ-QMG">
+            <objects>
+                <navigationController id="vjd-Sq-zWf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="tabbar-feed.png" id="TVo-an-Afh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9pP-qP-Z45">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RqB-Ef-dog" kind="relationship" relationship="rootViewController" id="gNd-C9-2Sk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebh-ec-ztX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="-528"/>
+        </scene>
+        <!--Navigation Controller - Nearby-->
+        <scene sceneID="h4p-XU-WYF">
+            <objects>
+                <navigationController id="KSb-ZI-6mb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nearby" image="NearBy_icon.png" id="bPl-bN-eOg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hbf-uv-AjS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P8Y-W2-F8p" kind="relationship" relationship="rootViewController" id="bZd-Nj-Vgb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1W8-T8-8HK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="150"/>
+        </scene>
+        <!--Navigation Controller - Setting-->
+        <scene sceneID="61x-Mt-tbW">
+            <objects>
+                <navigationController id="T5f-tZ-FmC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Setting" image="tabbar-settings.png" id="2cX-2z-abI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OBM-Cr-XHK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lhF-Gf-iwi" kind="relationship" relationship="rootViewController" id="hOF-7o-FSL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVm-at-FBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Card_preview_cat.png" width="278" height="139"/>
+        <image name="NearBy_icon.png" width="30" height="30"/>
+        <image name="card.png" width="295" height="202"/>
+        <image name="card_comment_bkg.png" width="254" height="45"/>
+        <image name="card_preview.png" width="293" height="156"/>
+        <image name="play-big.png" width="55" height="41"/>
+        <image name="tabbar-feed.png" width="33" height="27"/>
+        <image name="tabbar-settings.png" width="25" height="25"/>
+        <image name="user_1.png" width="36" height="36"/>
+    </resources>
+    <classes>
+        <class className="DisplayVideoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DisplayVideoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
